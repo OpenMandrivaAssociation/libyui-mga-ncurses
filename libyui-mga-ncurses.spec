@@ -21,7 +21,6 @@ BuildRequires:	ninja
 BuildRequires:	boost-devel
 BuildRequires:	doxygen
 BuildRequires:	texlive
-BuildRequires:	texlive-dist
 BuildRequires:	graphviz
 BuildRequires:	ghostscript
 Requires:	libyui
