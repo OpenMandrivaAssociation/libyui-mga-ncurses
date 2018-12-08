@@ -84,7 +84,6 @@ This package provides headers files for libyui-mga-ncurses development.
     -G Ninja
 
 %ninja_build
-%ninja_build docs
 
 %install
 %ninja_install -C build
