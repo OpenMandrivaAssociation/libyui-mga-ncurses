@@ -65,7 +65,6 @@ This package provides headers files for libyui-mga-ncurses development.
 %{_libdir}/yui/lib*.so
 %{_libdir}/pkgconfig/libyui-mga-ncurses.pc
 %{_libdir}/cmake/libyui-mga-ncurses
-%doc %{_docdir}/libyui-mga-ncurses%{major}
 
 #-----------------------------------------------------------------------
 
@@ -79,7 +78,6 @@ This package provides headers files for libyui-mga-ncurses development.
     -DDOC_DIR=%{_docdir} \
     -DLIB_DIR=%{_lib}    \
     -DENABLE_DEBUG=1     \
-    -DINSTALL_DOCS=yes   \
     -DCMAKE_BUILD_TYPE=RELWITHDEBINFO \
     -G Ninja
 
