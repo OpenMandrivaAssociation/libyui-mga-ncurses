@@ -46,7 +46,6 @@ dynamically linked with libyui-mga-ncurses.
 %files -n %{libname}
 %{_libdir}/yui/lib*.so.*
 
-
 #-----------------------------------------------------------------------
 
 %package -n %{develname}
@@ -55,7 +54,6 @@ Group:		Development/Other
 Requires:	libyui-devel
 Requires:	%{libname} = %{EVRD}
 Provides:	yui-mga-ncurses-devel = %{EVRD}
-
 
 %description -n %{develname}
 This package provides headers files for libyui-mga-ncurses development.
