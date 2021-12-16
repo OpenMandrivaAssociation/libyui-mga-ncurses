@@ -1,10 +1,10 @@
-%define major 8
+%define major 15
 %define libname %mklibname yui %{major}-mga-ncurses
 %define develname %mklibname yui-mga-ncurses -d
 
 Summary:	UI abstraction library - Mageia extension ncurses plugin
 Name:		libyui-mga-ncurses
-Version:	1.0.3
+Version:	1.2.0
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -20,7 +20,7 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	boost-devel
 BuildRequires:	doxygen
-BuildRequires:	texlive
+#BuildRequires:	texlive
 BuildRequires:	graphviz
 BuildRequires:	ghostscript
 Requires:	libyui
@@ -61,8 +61,6 @@ This package provides headers files for libyui-mga-ncurses development.
 %files -n %{develname}
 %{_includedir}/yui
 %{_libdir}/yui/lib*.so
-%{_libdir}/pkgconfig/libyui-mga-ncurses.pc
-%{_libdir}/cmake/libyui-mga-ncurses
 
 #-----------------------------------------------------------------------
 
@@ -70,7 +68,7 @@ This package provides headers files for libyui-mga-ncurses development.
 %autosetup -p1
 
 %build
-./bootstrap.sh
+#./bootstrap.sh
 %cmake \
     -DYPREFIX=%{_prefix} \
     -DDOC_DIR=%{_docdir} \
