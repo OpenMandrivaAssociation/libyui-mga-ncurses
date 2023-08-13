@@ -1,11 +1,12 @@
-%define major 15
-%define libname %mklibname yui %{major}-mga-ncurses
+%define major 16
+%define oldlibname %mklibname yui 15-mga-ncurses
+%define libname %mklibname yui-mga-ncurses
 %define develname %mklibname yui-mga-ncurses -d
 
 Summary:	UI abstraction library - Mageia extension ncurses plugin
 Name:		libyui-mga-ncurses
 Version:	1.2.0
-Release:	2
+Release:	3
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://github.com/manatools/libyui-mga-ncurses
@@ -38,6 +39,7 @@ Group:		System/Libraries
 Requires:	libyui
 Provides:	%{name} = %{EVRD}
 Provides:	libyui%{major}-mga-ncurses = %{EVRD}
+%rename %{oldlibname}
 
 %description -n %{libname}
 This package contains the library needed to run programs
@@ -81,5 +83,3 @@ This package provides headers files for libyui-mga-ncurses development.
 
 %install
 %ninja_install -C build
-
-find "%{buildroot}" -name "*.la" -delete
